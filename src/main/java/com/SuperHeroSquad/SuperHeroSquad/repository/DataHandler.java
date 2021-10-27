@@ -1,14 +1,19 @@
 package com.SuperHeroSquad.SuperHeroSquad.repository;
 
-import lombok.Data;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
+
+import com.SuperHeroSquad.SuperHeroSquad.model.Data;
+import com.jsoniter.JsonIterator;
+import com.jsoniter.output.JsonStream;
+
+import org.apache.commons.io.FileUtils;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
+@Component
 public class DataHandler {
 
     private final ResourceLoader loader;
